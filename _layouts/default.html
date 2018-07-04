@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="referrer" content="same-origin">
+
+    {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+
+    <!--[if lt IE 9]>
+    <script src="https://octoprint.org/assets/js/html5shim.js?_={{ site.time | date: '%s' }}"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="https://octoprint.org/assets/css/site.css?_={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="https://octoprint.org/assets/css/bootstrap-responsive.css?_={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="https://octoprint.org/assets/css/prettify.css?_={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="https://octoprint.org/assets/css/fontawesome-all.min.css?_={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="https://octoprint.org/assets/css/syntax.css?_={{ site.time | date: '%s' }}">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="https://octoprint.org/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="https://octoprint.org/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://octoprint.org/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://octoprint.org/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://octoprint.org/assets/img/apple-touch-icon-144x144.png">
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+{% include navigation.html %}
+
+<div id="wrap">
+    <div id="main">
+    {{ content }}
+    </div>
+</div>
+
+{% include footer.html %}
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="https://octoprint.org/assets/js/jquery-1.9.1.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/underscore-1.4.4.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/prettify-r224.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/holder-2.9.3.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/bootstrap.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/lightbox.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/smooth-scroll.min.js?_={{ site.time | date: '%s' }}"></script>
+<script src="https://octoprint.org/assets/js/site.js?_={{ site.time | date: '%s' }}"></script>
+
+</body>
+</html>
