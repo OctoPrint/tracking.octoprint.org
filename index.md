@@ -18,16 +18,34 @@ The client IP address itself will **not** be tracked.
 
 Currently the plugin fires tracking requests for the following events:
 
+  * Regular ping every 15min. No additional recorded data.
+
   * Server startup. Additional recorded data: 
+
     * OS name (e.g. "linux", "windows")
+    * Python version
+    * Pip version
+    * Number of CPU cores, CPU frequency and RAM
+    * If running on OctoPi: OctoPi version and Raspberry Pi model
+
+  * Server shutdown. No additional recorded data.
+
   * Start/cancel/finish of a print job. Additional recorded data: 
+
     * origin of printed file (local storage vs printer's SD card)
     * one-way SHA1 hash of the file name
     * elapsed time on print finish
+
   * Install/uninstall/enabling/disabling of a plugin. Additional recorded data: 
+
     * plugin identifier
     * plugin version
-  * Regular ping (by default every 15min). No additional recorded data.
+
+  * Update of a component (e.g. OctoPrint or a plugin). Additional recorded data:
+
+    * whether the plugin was successful or not
+    * updated component identifier
+    * from version, to version
 
 #### How and where does this data get evaluated? Are there any third parties involved?
 
