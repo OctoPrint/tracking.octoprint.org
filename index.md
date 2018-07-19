@@ -18,7 +18,7 @@ Currently the plugin fires tracking requests for the following events:
 
   * **Regular ping every 15min**. No additional recorded data.
 
-  * **Server startup**. Additional recorded data: 
+  * **Server startup**. Can be disabled in the plugin's settings. Additional recorded data: 
     * OS name (e.g. "linux", "windows")
     * Python version
     * Pip version
@@ -26,22 +26,22 @@ Currently the plugin fires tracking requests for the following events:
     * If running on a Raspberry Pi: Raspberry Pi model
     * If running on OctoPi: OctoPi version
 
-  * **Server shutdown**. No additional recorded data.
+  * **Server shutdown**. Can be disabled in the plugin's settings. No additional recorded data.
 
-  * **Start/cancel/finish of a print job**. Additional recorded data: 
+  * **Start/cancel/finish of a print job**. Can be disabled in the plugin's settings. Additional recorded data: 
     * origin of printed file (local storage vs printer's SD card)
     * one-way SHA1 hash of the file name
     * elapsed time on print finish
     
-  * **Connection to a printer**. Additional recorded data:
+  * **Connection to a printer**. Can be disabled in the plugin's settings. Additional recorded data:
     * used serial port & baudrate
     * firmware name as reported by `M115`
 
-  * **Install/uninstall/enabling/disabling of a plugin**. Additional recorded data: 
+  * **Install/uninstall/enabling/disabling of a plugin**. Can be disabled in the plugin's settings. Additional recorded data: 
     * plugin identifier
     * plugin version
 
-  * **Update of a component** (e.g. OctoPrint itself or a third party plugin). Additional recorded data:
+  * **Update of a component** (e.g. OctoPrint itself or a third party plugin). Can be disabled in the plugin's settings. Additional recorded data:
     * whether the update was successful or not
     * component identifier
     * from version, to version
