@@ -14,7 +14,7 @@ start and not connected in any way to personal identifiable information) to allo
 version. Additionally the country from which the request originates will be determined based on the client IP via GeoIP.
 The client IP address itself will **not** be tracked.
 
-Currently the plugin fires tracking requests for the following events:
+Currently the plugin fires tracking requests for the following events, most of which can be disabled in the plugin's settings:
 
   * **Regular ping every 15min**. No additional recorded data.
 
