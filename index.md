@@ -23,7 +23,8 @@ Currently the plugin fires tracking requests for the following events:
     * Python version
     * Pip version
     * Number of CPU cores, CPU frequency and RAM
-    * If running on OctoPi: OctoPi version and Raspberry Pi model
+    * If running on a Raspberry Pi: Raspberry Pi model
+    * If running on OctoPi: OctoPi version
 
   * **Server shutdown**. No additional recorded data.
 
@@ -31,6 +32,10 @@ Currently the plugin fires tracking requests for the following events:
     * origin of printed file (local storage vs printer's SD card)
     * one-way SHA1 hash of the file name
     * elapsed time on print finish
+    
+  * **Connection to a printer**. Additional recorded data:
+    * used serial port & baudrate
+    * firmware name as reported by `M115`
 
   * **Install/uninstall/enabling/disabling of a plugin**. Additional recorded data: 
     * plugin identifier
