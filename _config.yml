@@ -16,6 +16,7 @@ external: https://tracking.octoprint.org
 baseurl: ""
 
 title : tracking.octoprint.org
+description: Anonymous Usage Tracking in OctoPrint
 
 author:
   name: Gina Häußge

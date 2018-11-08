@@ -14,40 +14,53 @@ start and not connected in any way to personal identifiable information) to allo
 version. Additionally the country from which the request originates will be determined based on the client IP via GeoIP.
 The client IP address itself will **not** be tracked.
 
-Currently the plugin fires tracking requests for the following events, most of which can be disabled in the plugin's settings:
+The plugin fires tracking requests for the following events. Version numbers indicate in which OctoPrint version after
+1.3.10rc1 an event or additional data was added, also for as of yet unreleased versions. Most of the events can be
+switched off in the settings.
 
-  * **Regular ping every 15min**. No additional recorded data.
+  * **Regular ping every 15min**
+    
+    No additional recorded data.
 
-  * **Server startup**. Can be disabled in the plugin's settings. Additional recorded data: 
+  * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
+
     * OS name (e.g. "linux", "windows")
     * Python version
     * Pip version
     * Number of CPU cores, CPU frequency and RAM
-    * If running on a Raspberry Pi: Raspberry Pi model
-    * If running on OctoPi: OctoPi version
+    * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span>
+    * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span>
 
-  * **Server shutdown**. Can be disabled in the plugin's settings. No additional recorded data.
+  * **Server shutdown** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
+    
+    No additional recorded data.
 
-  * **Start/cancel/finish of a print job**. Can be disabled in the plugin's settings. Additional recorded data: 
+  * **Start/cancel/finish of a print job** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
+    
     * Origin of printed file (local storage vs printer's SD card)
     * One-way SHA1 hash of the file name, unique to the instance
     * Elapsed time on print finish
-    * If the system is currently throttled (currently only detected on Raspberry Pis): current and past throttle state
+    * If the system is currently throttled: current and past throttle state <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
+    * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
     
-  * **Connection to a printer**. Can be disabled in the plugin's settings. Additional recorded data:
+  * **Connection to a printer** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
+
     * Used serial port & baudrate
     * Firmware name as reported by `M115`
 
-  * **Install/uninstall/enabling/disabling of a plugin**. Can be disabled in the plugin's settings. Additional recorded data: 
+  * **Install/uninstall/enabling/disabling of a plugin** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
+
     * Plugin identifier
     * Plugin version
 
-  * **Update of a component** (e.g. OctoPrint itself or a third party plugin). Can be disabled in the plugin's settings. Additional recorded data:
+  * **Update of a component** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> 
+
     * Whether the update was successful or not
     * Component identifier
     * From version, to version
    
-  * **System got throttled/unthrottled** (e.g. due to undervoltage or overheat, currently only detected on Raspberry Pis). Can be disabled in the plugin's settings. Additional recorded data:
+  * **System got throttled/unthrottled** <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
+
     * Whether there's any current issue
     * Whether there's been any past issue
     * Whether there's a current undervoltage issue
