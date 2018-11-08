@@ -29,22 +29,31 @@ Currently the plugin fires tracking requests for the following events, most of w
   * **Server shutdown**. Can be disabled in the plugin's settings. No additional recorded data.
 
   * **Start/cancel/finish of a print job**. Can be disabled in the plugin's settings. Additional recorded data: 
-    * origin of printed file (local storage vs printer's SD card)
-    * one-way SHA1 hash of the file name
-    * elapsed time on print finish
+    * Origin of printed file (local storage vs printer's SD card)
+    * One-way SHA1 hash of the file name, unique to the instance
+    * Elapsed time on print finish
+    * If the system is currently throttled (currently only detected on Raspberry Pis): current and past throttle state
     
   * **Connection to a printer**. Can be disabled in the plugin's settings. Additional recorded data:
-    * used serial port & baudrate
-    * firmware name as reported by `M115`
+    * Used serial port & baudrate
+    * Firmware name as reported by `M115`
 
   * **Install/uninstall/enabling/disabling of a plugin**. Can be disabled in the plugin's settings. Additional recorded data: 
-    * plugin identifier
-    * plugin version
+    * Plugin identifier
+    * Plugin version
 
   * **Update of a component** (e.g. OctoPrint itself or a third party plugin). Can be disabled in the plugin's settings. Additional recorded data:
-    * whether the update was successful or not
-    * component identifier
-    * from version, to version
+    * Whether the update was successful or not
+    * Component identifier
+    * From version, to version
+   
+  * **System got throttled/unthrottled** (e.g. due to undervoltage or overheat, currently only detected on Raspberry Pis). Can be disabled in the plugin's settings. Additional recorded data:
+    * Whether there's any current issue
+    * Whether there's been any past issue
+    * Whether there's a current undervoltage issue
+    * Whether there's been a past undervoltage issue
+    * Whether there's a current overheat issue
+    * Whether there's been a past overheat issue
 
 #### How and where does this data get evaluated? Are there any third parties involved?
 
