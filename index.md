@@ -11,7 +11,9 @@ setup (or enabled it manually afterwards, through the corresponding switch in th
 
 All tracking requests record the OctoPrint version and a unique identifier of the OctoPrint instance (randomly created on first
 start and not connected in any way to personal identifiable information) to allow counting of unique instances per 
-version. Additionally the country from which the request originates will be determined based on the client IP via GeoIP.
+version. Additionally a rough location from which the request originates will be determined based on the client IP 
+using the [GeoLite2 City database](https://dev.maxmind.com/geoip/geoip2/geolite2/) and 
+[GeoIP](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html).
 The client IP address itself will **not** be tracked.
 
 The plugin fires tracking requests for the following events. Version numbers indicate in which OctoPrint version after
