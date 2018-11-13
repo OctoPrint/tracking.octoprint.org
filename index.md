@@ -43,7 +43,7 @@ switched off in the settings.
     * One-way SHA1 hash of the file name, unique to the instance
     * Elapsed time on print finish
     * If the system is currently throttled: current and past throttle state <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
-    * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
+    * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span>
     
   * **Connection to a printer** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
