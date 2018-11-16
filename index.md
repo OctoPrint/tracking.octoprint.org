@@ -73,7 +73,7 @@ switched off in the settings.
 #### How and where does this data get evaluated? Are there any third parties involved?
 
 The data gets recorded and evaluated on `tracking.octoprint.org`. It doesn't leave that server and gets evaluated in 
-place through a local [ELK stack install](https://www.elastic.co/elk-stack).
+place through a local [ELK stack](https://www.elastic.co/elk-stack) and [Grafana](https://grafana.com/) install.
 
 No third parties do have access to the raw data. Visualizations based on this data might be shared with the public
 in the future to give a general overview over version distribution and similar metrics.
