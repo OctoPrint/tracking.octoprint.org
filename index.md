@@ -22,7 +22,7 @@ switched off in the settings.
 
   * **Regular ping every 15min**
     
-    No additional recorded data.
+    * Uptime of OctoPrint <span title="Starting with OctoPrint 1.3.11rc1" class="label label-info">1.3.11rc1+</span> 
 
   * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
