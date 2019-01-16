@@ -46,7 +46,7 @@ switched off in the settings.
     
     * Origin of printed file (local storage vs printer's SD card)
     * One-way SHA1 hash of the file name, unique to the instance
-    * Elapsed time on print finish
+    * Elapsed time on print end
     * If the system is currently throttled: current and past throttle state <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
     * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span>
 
