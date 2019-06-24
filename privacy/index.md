@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-lastupdate: 2018-07-04 00:00:00 +0000
+lastupdate: 2019-06-24 00:00:00 +0000
 ---
 
 ## 1. An overview of data protection
