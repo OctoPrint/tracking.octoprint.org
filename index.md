@@ -32,6 +32,7 @@ switched off in the settings.
     * Number of CPU cores, CPU frequency and RAM
     * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span>
     * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span>
+    * Installed third party plugins & their version numbers <span title="Starting with OctoPrint 1.3.12rc1" class="label label-info">1.3.12rc1+</span>
 
   * **Server shutdown** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
     
