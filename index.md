@@ -79,6 +79,10 @@ switched off in the settings.
     * Whether there's been a past undervoltage issue
     * Whether there's a current overheat issue
     * Whether there's been a past overheat issue
+   
+  * **Onboard slicing triggered** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.12rc1" class="label label-info">1.3.12rc1+</span>
+  
+    * Slicer identifier
 
 #### How and where does this data get evaluated? Are there any third parties involved?
 
