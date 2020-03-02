@@ -27,6 +27,12 @@ switched off in the settings.
   * **Regular pong every 24h** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>  <span title="Starting with OctoPrint 1.3.12rc1" class="label label-info">1.3.12rc1+</span>
 
     * Installed third party plugins & their version numbers
+    * OS name (e.g. "linux", "windows") <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * Python version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * Pip version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * Number of CPU cores, CPU frequency and RAM <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span> <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
   
   * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
@@ -36,6 +42,27 @@ switched off in the settings.
     * Number of CPU cores, CPU frequency and RAM
     * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span>
     * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span>
+    
+    <details>
+      <summary>Different behaviour starting with OctoPrint 1.4.1rc1</summary>
+      No additional recorded data. <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    </details>
+
+    <!--
+    No additional recorded data. <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    
+    <details>
+      <summary>Different behaviour up to and including <span title="OctoPrint 1.3.12" class="label label-info">1.3.12</span></summary>
+      <ul>
+        <li>OS name (e.g. "linux", "windows")</li>
+        <li>Python version</li>
+        <li>Pip version</li>
+        <li>Number of CPU cores, CPU frequency and RAM</li>
+        <li>Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span></li>
+        <li>OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span></li>
+      </ul>
+    </details>
+    -->
 
   * **Server shutdown** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
     
