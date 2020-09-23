@@ -1,0 +1,5 @@
+venv
+export
+*.iml
+*.swp
+*.lock
