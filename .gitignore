@@ -1,5 +1,6 @@
 venv
 export
+.idea
 *.iml
 *.swp
 *.lock
