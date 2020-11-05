@@ -28,6 +28,7 @@ switched off in the settings.
 
     * Installed third party plugins & their version numbers
     * OS name (e.g. "linux", "windows") <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0rc1" class="label label-info">1.5.0rc1+</span>
     * Python version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
     * Pip version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
     * Number of CPU cores, CPU frequency and RAM <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
@@ -37,6 +38,7 @@ switched off in the settings.
   * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
     * OS name (e.g. "linux", "windows")
+    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0rc1" class="label label-info">1.5.0rc1+</span>
     * Python version
     * Pip version
     * Number of CPU cores, CPU frequency and RAM
