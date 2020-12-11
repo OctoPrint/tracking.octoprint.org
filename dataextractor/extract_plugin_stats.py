@@ -116,10 +116,7 @@ _since = (
     .isoformat()
 )
 _generated = (
-    datetime.datetime.fromtimestamp(NOW / 1000)
-    .replace(microsecond=0)
-    .astimezone()
-    .isoformat()
+    datetime.datetime.fromtimestamp(NOW).replace(microsecond=0).astimezone().isoformat()
 )
 plugins = dict()
 
