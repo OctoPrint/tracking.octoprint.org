@@ -1,10 +1,10 @@
-import requests
-import json
 import datetime
-
-import time
-import sys
 import io
+import json
+import sys
+import time
+
+import requests
 
 URL = sys.argv[1]
 DAYS = int(sys.argv[2])
@@ -115,6 +115,12 @@ _since = (
     .astimezone()
     .isoformat()
 )
+_generated = (
+    datetime.datetime.fromtimestamp(NOW / 1000)
+    .replace(microsecond=0)
+    .astimezone()
+    .isoformat()
+)
 plugins = dict()
 
 # -- Get accumulated plugin stats
@@ -193,5 +199,10 @@ if (
             plugins[plugin]["uninstall_events"] = count
 
 with open(OUTPUT, mode="w", encoding="utf-8") as f:
-    json.dump(dict(_since=_since, plugins=plugins), f, indent=2, ensure_ascii=False)
+    json.dump(
+        dict(_since=_since, _generated=_generated, plugins=plugins),
+        f,
+        indent=2,
+        ensure_ascii=False,
+    )
 print("Result written to {}".format(OUTPUT))

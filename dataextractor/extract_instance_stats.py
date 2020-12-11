@@ -79,12 +79,20 @@ QUERY_INSTANCE_HISTOGRAM = {
     },
 }
 
-output = dict(
-    _since=datetime.datetime.fromtimestamp(CUTOFF / 1000)
+_since = (
+    datetime.datetime.fromtimestamp(CUTOFF / 1000)
     .replace(microsecond=0)
     .astimezone()
     .isoformat()
 )
+_generated = (
+    datetime.datetime.fromtimestamp(NOW / 1000)
+    .replace(microsecond=0)
+    .astimezone()
+    .isoformat()
+)
+
+output = dict(_since=_since, _generated=_generated)
 
 # -- Get instance count
 print("Instance count: Sending query to {}".format(URL))

@@ -109,6 +109,12 @@ _since = (
     .astimezone()
     .isoformat()
 )
+_generated = (
+    datetime.datetime.fromtimestamp(NOW / 1000)
+    .replace(microsecond=0)
+    .astimezone()
+    .isoformat()
+)
 
 # -- Get version counts
 print("Python versions: Sending query to {}".format(URL))
@@ -176,7 +182,12 @@ for timestamp, data in temp.items():
 
 with open(OUTPUT, mode="w", encoding="utf-8") as f:
     json.dump(
-        {"_since": _since, "versions": versions, "histogram": histogram},
+        {
+            "_since": _since,
+            "_generated": _generated,
+            "versions": versions,
+            "histogram": histogram,
+        },
         f,
         indent=2,
         ensure_ascii=False,
