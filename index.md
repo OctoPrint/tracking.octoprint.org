@@ -17,28 +17,28 @@ using the [GeoLite2 City database](https://dev.maxmind.com/geoip/geoip2/geolite2
 The client IP address itself will **not** be tracked.
 
 The plugin fires tracking requests for the following events. Version numbers indicate in which OctoPrint version after
-1.3.10rc1 an event or additional data was added, also for as of yet unreleased versions. Most of the events can be
+1.3.10 an event or additional data was added, also for as of yet unreleased versions. Most of the events can be
 switched off in the settings.
 
   * **Regular ping every 15min**
     
-    * Uptime of OctoPrint <span title="Starting with OctoPrint 1.3.11rc1" class="label label-info">1.3.11rc1+</span> 
+    * Uptime of OctoPrint <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
 
-  * **Regular pong every 24h** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>  <span title="Starting with OctoPrint 1.3.12rc1" class="label label-info">1.3.12rc1+</span>
+  * **Regular pong every 24h** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>  <span title="Starting with OctoPrint 1.3.12" class="label label-info">1.3.12+</span>
 
     * Installed third party plugins & their version numbers
-    * OS name (e.g. "linux", "windows") <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
-    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0rc1" class="label label-info">1.5.0rc1+</span>
-    * Python version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
-    * Pip version <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
-    * Number of CPU cores, CPU frequency and RAM <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
-    * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
-    * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span> <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    * OS name (e.g. "linux", "windows") <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0" class="label label-info">1.5.0+</span>
+    * Python version <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * Pip version <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * Number of CPU cores, CPU frequency and RAM <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span> <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
   
   * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
     * OS name (e.g. "linux", "windows")
-    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0rc1" class="label label-info">1.5.0rc1+</span>
+    * Whether OS is 32bits or 64bits <span title="Starting with OctoPrint 1.5.0" class="label label-info">1.5.0+</span>
     * Python version
     * Pip version
     * Number of CPU cores, CPU frequency and RAM
@@ -46,12 +46,12 @@ switched off in the settings.
     * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span>
     
     <details>
-      <summary>Different behaviour starting with OctoPrint 1.4.1rc1</summary>
-      No additional recorded data. <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+      <summary>Different behaviour starting with OctoPrint 1.4.1</summary>
+      No additional recorded data. <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
     </details>
 
     <!--
-    No additional recorded data. <span title="Starting with OctoPrint 1.4.1rc1" class="label label-info">1.4.1rc1+</span>
+    No additional recorded data. <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
     
     <details>
       <summary>Different behaviour up to and including <span title="OctoPrint 1.3.12" class="label label-info">1.3.12</span></summary>
@@ -80,14 +80,14 @@ switched off in the settings.
     * Origin of printed file (local storage vs printer's SD card)
     * One-way SHA1 hash of the file name, unique to the instance
     * Elapsed time on print end
-    * If the system is currently throttled: current and past throttle state <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
-    * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span>
+    * If the system is currently throttled: current and past throttle state <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.3.10" class="label label-info">1.3.10+</span> 
+    * If the print failed: reason of failure (cancel vs error) <span title="Starting with OctoPrint 1.3.10" class="label label-info">1.3.10+</span>
 
-  * **Errors in the communication with the printer and/or reported by the firmware** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.11rc1" class="label label-info">1.3.11rc1+</span>
+  * **Errors in the communication with the printer and/or reported by the firmware** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
     
     * Error text generated by the firmware or OctoPrint
   
-  * **Printer Safety Check warnings** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.11rc1" class="label label-info">1.3.11rc1+</span>
+  * **Printer Safety Check warnings** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
   
     * Warning type (e.g. "firmware-unsafe")
     * Name of check that triggered the warning
@@ -103,7 +103,7 @@ switched off in the settings.
     * Component identifier
     * From version, to version
    
-  * **System got throttled/unthrottled** <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.10rc2" class="label label-info">1.3.10rc2+</span> 
+  * **System got throttled/unthrottled** <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.10" class="label label-info">1.3.10+</span> 
 
     * Whether there's any current issue
     * Whether there's been any past issue
@@ -112,7 +112,7 @@ switched off in the settings.
     * Whether there's a current overheat issue
     * Whether there's been a past overheat issue
    
-  * **Onboard slicing triggered** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.12rc1" class="label label-info">1.3.12rc1+</span>
+  * **Onboard slicing triggered** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.12" class="label label-info">1.3.12+</span>
   
     * Slicer identifier
 
