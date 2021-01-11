@@ -23,6 +23,7 @@ switched off in the settings.
   * **Regular ping every 15min**
     
     * Uptime of OctoPrint <span title="Starting with OctoPrint 1.3.11" class="label label-info">1.3.11+</span>
+    * Current printer state <span title="Starting with OctoPrint 1.6.0" class="label label-info">1.6.0+</span>
 
   * **Regular pong every 24h** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>  <span title="Starting with OctoPrint 1.3.12" class="label label-info">1.3.12+</span>
 
