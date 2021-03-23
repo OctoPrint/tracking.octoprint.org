@@ -136,7 +136,8 @@ if (
 buckets = result["aggregations"]["2"]["buckets"]
 
 for bucket in buckets:
-    plugins[bucket["key"]] = dict(
+    plugin = bucket["key"].lower()
+    plugins[plugin] = dict(
         instances=bucket["1"]["value"],
         versions=dict(),
         install_events=0,
@@ -171,7 +172,7 @@ if (
 ):
     buckets = result["aggregations"]["3"]["buckets"]
     for bucket in buckets:
-        plugin = bucket["key"]
+        plugin = bucket["key"].lower()
         count = bucket["1"]["value"]
 
         if plugin in plugins:
@@ -189,7 +190,7 @@ if (
 ):
     buckets = result["aggregations"]["3"]["buckets"]
     for bucket in buckets:
-        plugin = bucket["key"]
+        plugin = bucket["key"].lower()
         count = bucket["1"]["value"]
 
         if plugin in plugins:
