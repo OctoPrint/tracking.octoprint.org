@@ -102,7 +102,6 @@ print("Total duration: Sending query to {}".format(URL))
 resp = requests.post(url=URL, json=QUERY_TOTAL)
 
 result = resp.json()
-print(repr(result))
 if (
     not "aggregations" in result
     or not "1" in result.get("aggregations")
