@@ -116,6 +116,11 @@ switched off in the settings.
   * **Onboard slicing triggered** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.12" class="label label-info">1.3.12+</span>
   
     * Slicer identifier
+    
+  * **WebUI loaded**  <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.7.0" class="label label-info">1.7.0+</span>
+
+    * Browser name & version
+    * OS name & version that the browser is running under
 
 #### How and where does this data get evaluated? Are there any third parties involved?
 
