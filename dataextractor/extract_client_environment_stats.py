@@ -65,6 +65,52 @@ QUERY_OS = {
     },
 }
 
+QUERY_BROWSER_AND_VERSION = {
+    "aggs": {
+        "2": {
+            "terms": {
+                "field": "payload.browser_and_version.keyword",
+                "order": {"1": "desc"},
+                "size": 1000,
+                "min_doc_count": 1,
+            },
+            "aggs": {"1": {"cardinality": {"field": "uuid.keyword"}}},
+        }
+    },
+    "size": 0,
+    "query": {
+        "bool": {
+            "must": [
+                {"range": {"@timestamp": {"gte": CUTOFF, "format": "epoch_millis"}}},
+                {"query_string": {"query": "event:webui_load"}},
+            ]
+        }
+    },
+}
+
+QUERY_OS_AND_VERSION = {
+    "aggs": {
+        "2": {
+            "terms": {
+                "field": "payload.os_and_version.keyword",
+                "order": {"1": "desc"},
+                "size": 1000,
+                "min_doc_count": 1,
+            },
+            "aggs": {"1": {"cardinality": {"field": "uuid.keyword"}}},
+        }
+    },
+    "size": 0,
+    "query": {
+        "bool": {
+            "must": [
+                {"range": {"@timestamp": {"gte": CUTOFF, "format": "epoch_millis"}}},
+                {"query_string": {"query": "event:webui_load"}},
+            ]
+        }
+    },
+}
+
 _since = (
     datetime.datetime.fromtimestamp(CUTOFF / 1000)
     .replace(microsecond=0)
