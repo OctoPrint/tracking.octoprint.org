@@ -69,7 +69,7 @@ QUERY_BROWSER_AND_VERSION = {
     "aggs": {
         "2": {
             "terms": {
-                "field": "payload.browser_and_version.keyword",
+                "field": "browser_name_and_version.keyword",
                 "order": {"1": "desc"},
                 "size": 1000,
                 "min_doc_count": 1,
@@ -92,7 +92,7 @@ QUERY_OS_AND_VERSION = {
     "aggs": {
         "2": {
             "terms": {
-                "field": "payload.os_and_version.keyword",
+                "field": "browser_os_and_version.keyword",
                 "order": {"1": "desc"},
                 "size": 1000,
                 "min_doc_count": 1,
@@ -125,6 +125,8 @@ _results = {}
 _queries = (
     ("browser", QUERY_BROWSER),
     ("os", QUERY_OS),
+    ("browser_version", QUERY_BROWSER_AND_VERSION),
+    ("os_version", QUERY_OS_AND_VERSION),
 )
 
 # -- Get counts
