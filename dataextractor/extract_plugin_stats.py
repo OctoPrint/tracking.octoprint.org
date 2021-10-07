@@ -35,14 +35,28 @@ QUERY_PLUGINS = {
 
 QUERY_PLUGIN_VERSIONS = {
     "aggs": {
-        "2": {
-            "terms": {
-                "field": "payload.plugins_and_version.keyword",
-                "order": {"1": "desc"},
+        "buckets": {
+            "composite": {
                 "size": 1000,
-                "min_doc_count": 1,
+                # "after": { "plugins_and_versions": "actioncommands:0.4" },
+                "sources": [
+                    {
+                        "plugins_and_versions": {
+                            "terms": {
+                                "field": "payload.plugins_and_version.keyword",
+                                "order": "asc"
+                            }
+                        }
+                    }
+                ]
             },
-            "aggs": {"1": {"cardinality": {"field": "uuid.keyword"}}},
+            "aggregations": {
+                "instances": {
+                    "cardinality": {
+                        "field": "uuid.keyword"
+                    }
+                }
+            }
         }
     },
     "size": 0,
@@ -50,7 +64,7 @@ QUERY_PLUGIN_VERSIONS = {
         "bool": {
             "must": [{"range": {"@timestamp": {"gte": CUTOFF, "format": "epoch_millis"}}}]
         }
-    },
+    }    
 }
 
 QUERY_PLUGIN_INSTALLS = {
@@ -146,7 +160,40 @@ for bucket in buckets:
 
 # -- Get plugin version stats
 print("Plugin versions: Sending query to {}".format(URL))
-resp = requests.post(url=URL, json=QUERY_PLUGIN_VERSIONS)
+after = None
+count = 0
+
+while True:
+    count += 1
+
+    query = QUERY_PLUGIN_VERSIONS.copy()
+    if after is not None:
+        query["aggs"]["buckets"]["composite"]["after"] = {
+            "plugins_and_versions": after
+        }
+
+    print("  Query #{}, after_key: {}".format(count, after))
+    resp = requests.post(url=URL, json=QUERY_PLUGIN_VERSIONS)
+    result = resp.json()
+
+    if not ("aggregations" in result and "buckets" in result.get("aggregations") and "buckets" in result.get("aggregations").get("buckets") and "after_key" in result.get("aggregations").get("buckets") and "plugins_and_versions" in result.get("aggregations").get("buckets").get("after_key")):
+        break
+
+    if len(result["aggregations"]["buckets"]["buckets"]) == 0:
+        # we've gone through all buckets
+        break
+
+    after = result["aggregations"]["buckets"]["after_key"]["plugins_and_versions"]
+
+    for bucket in result["aggregations"]["buckets"]["buckets"]:
+        if not "key" in bucket or not "plugins_and_versions" in bucket["key"]:
+            continue
+        if not "instances" in bucket:
+            continue
+
+        plugin, version = bucket["key"]["plugins_and_versions"].rsplit(":", 1)
+        if plugin in plugins:
+            plugins[plugin]["versions"][version] = dict(instances=bucket["instances"]["value"])
 
 result = resp.json()
 if (
