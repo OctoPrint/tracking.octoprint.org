@@ -195,18 +195,6 @@ while True:
         if plugin in plugins:
             plugins[plugin]["versions"][version] = dict(instances=bucket["instances"]["value"])
 
-result = resp.json()
-if (
-    "aggregations" in result
-    and "2" in result.get("aggregations")
-    and "buckets" in result["aggregations"]["2"]
-):
-    buckets = result["aggregations"]["2"]["buckets"]
-    for bucket in buckets:
-        plugin, version = bucket["key"].rsplit(":", 1)
-        if plugin in plugins:
-            plugins[plugin]["versions"][version] = dict(instances=bucket["1"]["value"])
-
 # -- Get plugin installation stats
 print("Install event: Sending query to {}".format(URL))
 resp = requests.post(url=URL, json=QUERY_PLUGIN_INSTALLS)
