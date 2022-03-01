@@ -65,6 +65,29 @@ QUERY_OCTOPI = {
     },
 }
 
+QUERY_OCTOPI_UPTODATE = {
+    "aggs": {
+        "2": {
+            "terms": {
+                "field": "payload.octopiuptodate_build.keyword",
+                "order": {"1": "desc"},
+                "size": 1000,
+                "min_doc_count": 1,
+            },
+            "aggs": {"1": {"cardinality": {"field": "uuid.keyword"}}},
+        }
+    },
+    "size": 0,
+    "query": {
+        "bool": {
+            "must": [
+                {"range": {"@timestamp": {"gte": CUTOFF, "format": "epoch_millis"}}},
+                {"query_string": {"query": "event:pong"}},
+            ]
+        }
+    },
+}
+
 _since = (
     datetime.datetime.fromtimestamp(CUTOFF / 1000)
     .replace(microsecond=0)
