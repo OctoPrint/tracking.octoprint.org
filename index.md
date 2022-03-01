@@ -45,6 +45,7 @@ switched off in the settings.
     * Number of CPU cores, CPU frequency and RAM
     * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span>
     * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span>
+    * OctoPi-UpToDate build <span title="Only if running from an OctoPi-UpToDate build" class="label">OctoPi-UpToDate build only</span> <span title="Starting with OctoPrint 1.8.0" class="label label-info">1.8.0+</span>
     
     <details>
       <summary>Different behaviour starting with OctoPrint 1.4.1</summary>
