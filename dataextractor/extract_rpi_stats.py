@@ -99,7 +99,7 @@ _generated = (
 )
 
 _results = {}
-_queries = (("models", QUERY_MODELS), ("octopi_versions", QUERY_OCTOPI))
+_queries = (("models", QUERY_MODELS), ("octopi_versions", QUERY_OCTOPI), ("octopiupdtodate_builds", QUERY_OCTOPI_UPTODATE))
 
 # -- Get counts
 
