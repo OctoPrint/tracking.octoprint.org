@@ -22,14 +22,17 @@ author:
   name: Gina Häußge
   twitter: foosel
 
-sourcerepo: https://github.com/foosel/OctoPrint
+sourcerepo: https://github.com/OctoPrint/OctoPrint
+forum: https://community.octoprint.org
+discord: https://discord.octoprint.org
+irc: ircs://irc.libera.chat:6697/#octoprint
 
 twitter: OctoPrint3D
+mastodon: "@octoprint@fosstodon.org"
 facebook: OctoPrint
-gplus: OctoPrintOrg
 youtube: OctoPrint3D
 
 twitterlink: https://twitter.com/OctoPrint3D
+mastodonlink: https://fosstodon.org/@octoprint
 facebooklink: https://facebook.com/OctoPrint
-gpluslink: https://plus.google.com/+OctoprintOrg/posts
 youtubelink: https://www.youtube.com/c/OctoPrint3D
