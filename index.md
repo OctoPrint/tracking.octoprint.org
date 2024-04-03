@@ -133,8 +133,8 @@ switched off in the settings.
 The data gets recorded and evaluated on `tracking.octoprint.org`. It doesn't leave that server and gets evaluated in 
 place through a local [ELK stack](https://www.elastic.co/elk-stack) and [Grafana](https://grafana.com/) install.
 
-No third parties do have access to the raw data. Visualizations based on this data might be shared with the public
-in the future to give a general overview over version distribution and similar metrics.
+No third parties do have access to the raw data. Some exports of queries based on this data are available [here](https://data.octoprint.org/export/). 
+Visualizations based on these exports are provided on [data.octoprint.org](https://data.octoprint.org).
 
 #### How can I disable tracking?
 
