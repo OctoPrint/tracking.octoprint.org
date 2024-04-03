@@ -35,6 +35,7 @@ switched off in the settings.
     * Number of CPU cores, CPU frequency and RAM <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
     * Raspberry Pi model <span title="Only if running on a Raspberry Pi" class="label">RPi only</span> <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
     * OctoPi version <span title="Only if running under OctoPi" class="label">OctoPi only</span> <span title="Starting with OctoPrint 1.4.1" class="label label-info">1.4.1+</span>
+    * Unlocked achievements <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.10.0" class="label label-info">1.10.0+</span>
   
   * **Server startup** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span>
 
@@ -113,6 +114,10 @@ switched off in the settings.
     * Whether there's been a past undervoltage issue
     * Whether there's a current overheat issue
     * Whether there's been a past overheat issue
+
+  * **Achievement unlocked** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.10.0" class="label label-info">1.10.0+</span>
+
+    * Achievement identifier
    
   * **Onboard slicing triggered** <span title="Can be switched off in the plugin settings" class="label label-success">switchable</span> <span title="Starting with OctoPrint 1.3.12" class="label label-info">1.3.12+</span>
   
