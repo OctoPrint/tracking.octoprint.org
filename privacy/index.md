@@ -60,11 +60,12 @@ access is not possible.
 The party responsible for processing data on this website is:
 
 Gina Häußge<br />
-Goethestraße 5<br />
-63179 Obertshausen<br />
+c/o IP-Management #11901<br />
+Ludwig-Erhard-Str. 18<br />
+20459 Hamburg<br />
 Germany
 
-Telephone: +49 6104 9872629<br />
+Telephone: +49 6104 6893863<br />
 Email: privacy@octoprint.org
 
 The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and 
