@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-lastupdate: 2019-06-24 00:00:00 +0000
+lastupdate: 2024-06-27 00:00:00 +0000
 ---
 
 ## 1. An overview of data protection
@@ -124,10 +124,12 @@ On further processing by the local analysis backend, this gets turned into the f
   * Time of the server request
   * Unique anonymous identifier generated randomly per OctoPrint instance
   * OctoPrint version
+  * IP address
   * GeoIP data for the originating request
   * further unpersonalized data associated with each tracking event, such as print durations.
 
-The IP address gets stripped.
+The IP address used to get stripped, however due to data manipulation by bad actors it turned out to be required
+to be able to filter out bad data within the active tracking period. 
 
 This processed data is deleted after 90 days. It will not be combined with data from other sources.
 
