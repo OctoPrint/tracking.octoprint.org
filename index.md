@@ -129,10 +129,13 @@ switched off in the settings.
 
 #### How and where does this data get evaluated? Are there any third parties involved?
 
-The data gets recorded and evaluated on `tracking.octoprint.org`. It doesn't leave that server and gets evaluated in 
+No, there are no third parties involved.
+
+The raw data gets recorded and evaluated on `tracking.octoprint.org`. It doesn't leave that server and gets evaluated in 
 place through a local [ELK stack](https://www.elastic.co/elk-stack) and [Grafana](https://grafana.com/) install.
 
-No third parties do have access to the raw data. Some exports of queries based on this data are available [here](https://data.octoprint.org/export/). 
+Some exports of queries based on the data are automatically created by an hourly cronjob and made available [here](https://data.octoprint.org/export/).
+
 Visualizations based on these exports are provided on [data.octoprint.org](https://data.octoprint.org).
 
 #### How can I disable tracking?
